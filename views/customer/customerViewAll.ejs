@@ -1,0 +1,24 @@
+<%- include("../header.ejs", {title:"Customers in our Inventory"}); %>
+
+<h1>Customers</h1>
+<a href="/company/add">Add New Company</a> <br />
+
+<br />
+
+<table border="1">
+    <tr><th>Name</th><th>Actions</th></tr>
+    <% for(var i=0; result.length > i; i++ ) { %>
+    <tr>
+        <td><a href="/customer/?customerNumber=<%= result[i].customerNumber %>"><%= result[i].firstName %></a></td>
+        <td>
+            <button onclick="event.preventDefault();window.location.href='/customer/edit/?customerNumber=<%= result[i].customerNumber %>'">Edit</button>
+            <form action="/customer/delete/" style="display:inline;">
+                <input type="hidden" name="customerNumber" id="customerNumber" value="<%= result[i].customerNumber %>" />
+                <input type="submit" value="Delete"/>
+            </form>
+
+        </td>
+    </tr>
+    <% } %>
+</table>
+<%- include("../footer.ejs"); %>

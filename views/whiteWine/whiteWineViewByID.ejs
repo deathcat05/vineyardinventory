@@ -1,0 +1,10 @@
+<%- include("../header.ejs", {title:"White Wines - " + result[0].whiteName}); %>
+<h1> <%= result[0].whiteName%> </h1>
+<ul>
+    <li>White Year: <%= result[0].whiteYear %></li>
+    <li> Description: <%= result[0].description %> </li>
+</ul>
+
+<a href="/whiteWine/all"><< back</a>
+
+<%- include("../footer.ejs"); %>
