@@ -20,10 +20,10 @@ exports.getAll = function(callback)
  SELECT s.* from skill s;
  */
 
-exports.getById = function(skillID, callback)
+exports.getById = function(whiteBottleNumber, callback)
 {
     var query = 'SELECT * FROM WhiteWine WHERE whiteBottleNumber = ?;';
-    var queryData = [skillID];
+    var queryData = [whiteBottleNumber];
     console.log(query);
 
     connection.query(query, queryData, function(err, result)

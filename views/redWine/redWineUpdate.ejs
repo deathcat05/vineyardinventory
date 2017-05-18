@@ -1,0 +1,47 @@
+<style>
+    a:link {
+        color: blue;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: purple;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: lightseagreen;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: darkslategrey;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+</style>
+
+<h1>Update <%= redWine.redName%></h1>
+<form action="/redWine/update" method="get">
+    <input type="hidden" id="redBottleNumber" name="redBottleNumber" value="<%= redWine.redBottleNumber %>">
+    Name: <input id="redName" name="redName" type="text" value="<%= redWine.redName%>"/>
+    <br />
+    <br />
+    Year: <input id="redYear" name="redYear" type="text" value="<%= redWine.redYear%>"/>
+    <br />
+    <br />
+    Bottles Available: <input id="numberRedAvail" name="numberRedAvail" type="text" value="<%= redWine.numberRedAvail%>"/>
+    <br />
+    <br />
+    Description: <input id="description" name="description" type="text" value="<%= redWine.description%>"/>
+    <br />
+    <br />
+    <input type="submit"/>
+
+</form>
+<%- include("../footer.ejs"); %>
+
+</html>

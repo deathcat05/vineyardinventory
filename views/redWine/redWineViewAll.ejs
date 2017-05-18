@@ -1,4 +1,29 @@
-<%- include("../header.ejs", {title:"View All Red Wines - View All"}); %>
+<%- include("../header.ejs", {title:"View All White Wines - View All"}); %>
+<style>
+    a:link {
+        color: blue;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: purple;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: lightseagreen;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: darkslategrey;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+</style>
 
 <h1>Our Finest Red Wines </h1>
 <p> Our white wines are imported locally from wines all across Sonoma and Napa counties. Nothing below three years is kept in stock. <br>
@@ -6,9 +31,12 @@
     what it has to offer! </p>
 
 <table border="1">
+    <tr> <th> Red Wine </th> <th> Actions </th> </tr>
     <% for(var i=0; result.length > i; i++ ) { %>
-    <a href="/redWine/?redBottleNumber=<%= result[i].redBottleNumber %>"><%= result[i].redName %></a> </br></td>
-
+    <tr>
+        <td> <a href="/redWine/?redBottleNumber=<%= result[i].redBottleNumber %>"><%= result[i].redName %></a></td>
+        <td> <button onclick="event.preventDefault();window.location.href='/redWine/edit/?redBottleNumber=<%= result[i].redBottleNumber %>'"> Edit </button></td>
+    </tr>
     <% } %>
 </table>
 <%- include("../footer.ejs"); %>

@@ -1,11 +1,10 @@
-/**
- * Created by deathcat05 on 5/17/2017.
- */
 var express = require('express');
 var router = express.Router();
 var redWine_dal = require('../model/redWine_dal');
 
-// View All companys
+
+
+// View All Addresses
 router.get('/all', function(req, res) {
     redWine_dal.getAll(function(err, result){
         if(err) {
@@ -20,11 +19,13 @@ router.get('/all', function(req, res) {
 
 // View the company for the given id
 router.get('/', function(req, res){
-    if(req.query.redBottleNumber == null) {
-        res.send('Sorry, but there is not a bottle with that number *sad panda*');
+    if(req.query.redBottleNumber == null)
+    {
+        res.send('We cannot seem to find that bottle in our inventory');
     }
     else {
-        redWine_dal.getById(req.query.redBottleNumber, function(err,result) {
+        redWine_dal.getById(req.query.redBottleNumber, function(err,result)
+        {
             if (err) {
                 res.send(err);
             }
@@ -43,7 +44,7 @@ router.get('/add', function(req, res){
             res.send(err);
         }
         else {
-            res.render('redWine/redWineAdd', {'redWine': result});
+            res.render('redWine/redWineAdd');
         }
     });
 });
@@ -51,19 +52,34 @@ router.get('/add', function(req, res){
 // View the company for the given id
 router.get('/insert', function(req, res){
     // simple validation
-    if(req.query.redBottleNumber == null) {
-        res.send('I cannot add to your inventory, unless you provide a number (:' );
-    }
-    else
+    if(req.query.redBottleNumber == null)
     {
+        res.send('There needs to be a bottle number ');
+    }
+    else if(req.query.redName == null)
+    {
+        res.send('A name must be provided');
+    }
+    else if(req.query.redYear == null)
+    {
+        res.send('We need to know the year of the wine');
+    }
+    else if(req.query.description == null)
+    {
+        res.send('We want to know all the dirty deets about this wine!');
+    }
+
+    else {
         // passing all the query parameters (req.query) to the insert function instead of each individually
         redWine_dal.insert(req.query, function(err,result)
         {
-            if (err) {
-                console.log(err)
+            if (err)
+            {
+                console.log(err);
                 res.send(err);
             }
-            else {
+            else
+            {
                 //poor practice for redirecting the user to a different page, but we will handle it differently once we start using Ajax
                 res.redirect(302, '/redWine/all');
             }
@@ -71,50 +87,44 @@ router.get('/insert', function(req, res){
     }
 });
 
-router.get('/edit', function(req, res){
-    if(req.query.redBottleNumber == null) {
-        res.send('In order to edit, we need to know a bottle number ');
+router.get('/edit', function(req, res)
+{
+    if(req.query.redBottleNumber == null)
+    {
+        res.send('We need to know which wine you would like to edit');
     }
-    else {
-        redWine_dal.edit(req.query.redBottleNumber, function(err, result){
-            res.render('company/companyUpdate', {whiteWine: result[0][0]});
+    else
+    {
+        redWine_dal.edit(req.query.redBottleNumber, function(err, result)
+        {
+            res.render('redWine/redWineUpdate', {redWine: result[0][0]});
         });
     }
 
 });
-/*
- router.get('/edit2', function(req, res){
- if(req.query.company_id == null) {
- res.send('A company id is required');
- }
- else {
- company_dal.getById(req.query.company_id, function(err, company){
- address_dal.getAll(function(err, address) {
- res.render('company/companyUpdate', {company: company[0], address: address});
- });
- });
- }
 
- });
- */
-
-router.get('/update', function(req, res) {
-    redWine_dal.update(req.query, function(err, result){
+router.get('/update', function(req, res)
+{
+    redWine_dal.update(req.query, function(err, result)
+    {
         res.redirect(302, '/redWine/all');
     });
 });
 
-// Delete a company for the given company_id
+// Delete a company for the given companyID
 router.get('/delete', function(req, res){
     if(req.query.redBottleNumber == null) {
-        res.send('The bottle number does not exist ');
+        res.send('We need to know which bottle you want to delete');
     }
     else {
-        redWine_dal.delete(req.query.redBottleNumber, function(err, result){
-            if(err) {
+        redWine_dal(req.query.redBottleNumber, function(err, result)
+        {
+            if(err)
+            {
                 res.send(err);
             }
-            else {
+            else
+            {
                 //poor practice, but we will handle it differently once we start using Ajax
                 res.redirect(302, '/redWine/all');
             }

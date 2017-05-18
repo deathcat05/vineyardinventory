@@ -1,10 +1,37 @@
-<%- include("../header.ejs", {title:"White Wines - " + result[0].redName}); %>
+<%- include("../header.ejs", {title:"White Wines - " + result[0].whiteName}); %>
+<style>
+    a:link {
+        color: blue;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: purple;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: lightseagreen;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: darkslategrey;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+</style>
 <h1> <%= result[0].redName%> </h1>
 <ul>
     <li>Red Year: <%= result[0].redYear %></li>
+    <li> Number of Bottles Available: <%= result[0].numberRedAvail %></li>
     <li> Description: <%= result[0].description %> </li>
+
 </ul>
 
-<a href="/whiteWine/all"><< back</a>
+<a href="/redWine/all"><< back</a>
 
 <%- include("../footer.ejs"); %>

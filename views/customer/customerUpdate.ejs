@@ -1,0 +1,47 @@
+<style>
+    a:link {
+        color: blue;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: purple;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: lightseagreen;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: darkslategrey;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+</style>
+
+<h1>Update <%= customer.firstName%></h1>
+<form action="/customer/update" method="get">
+    <input type="hidden" id="customerNumber" name="customerNumber" value="<%= customer.customerNumber %>">
+   First Name: <input id="firstName" name="firstName" type="text" value="<%= customer.firstName%>"/>
+    <br />
+    <br />
+    Last Name: <input id="lastName" name="lastName" type="text" value="<%= customer.lastName%>"/>
+    <br />
+    <br />
+    Address: <input id="address" name="address" type="text" value="<%= customer.address%>"/>
+    <br />
+    <br />
+    Club Member: <input id="isMember" name="isMember" type="text" value="<%= customer.isMember%>"/>
+    <br />
+    <br />
+    <input type="submit"/>
+
+</form>
+<%- include("../footer.ejs"); %>
+
+</html>

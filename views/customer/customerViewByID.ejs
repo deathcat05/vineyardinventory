@@ -1,0 +1,11 @@
+<%- include("../header.ejs", {title:"Customer - " + result[0].firstName}); %>
+<h1>Customer - <%= result[0].firstName %></h1>
+<ul>
+    <li>Customer Full Name: <%= result[0].firstName + ' ' + result[0].lastName %></li>
+    <li>Address: <%= result[0].address %> </li>
+    <li> Club Member: <%= result[0].isMember %> </li>
+</ul>
+
+<a href="/customer/all"><< back</a>
+
+<%- include("../footer.ejs"); %>
