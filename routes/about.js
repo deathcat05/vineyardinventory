@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/about', function(req, res)
+router.get('/', function(req, res)
 {
-    res.render('about', {title: 'About'})
+    res.render('about', {title: 'About Valley Vineyards'})
 });
 
 module.exports = router;

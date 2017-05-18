@@ -9,7 +9,7 @@ var index = require('./routes/index');
 var about = require('./routes/about');
 var whiteWine = require('./routes/whiteWine_routes');
 var redWine = require('./routes/redWine_routes');
-var customer = require('./routes/customer_routes')
+var customer = require('./routes/customer_routes');
 var app = express();
 
 // view engine setup

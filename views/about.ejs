@@ -1,5 +1,52 @@
 <%- include("header.ejs", {title: title}); %>
+<style>
+    a:link {
+        color: blue;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: purple;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: lightseagreen;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: darkslategrey;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+</style>
 
 <h1><%= title %></h1>
+<p> Valley Vineyards was founded in 1993 by Kristine McDowell. She moved to Napa valley with the dream of being a great wine connesiour. She began to build
+a repoire with many of the local vineyard owners. By the year 2000, McDowell became the largest wine distributor in northern California.
+    <br>
+    McDowell established this website to help her team, and her members recieve wine in a timely manner. She wants her members (and non members) to see what happens
+    behind the scenes. That's why she's decided to display all her orders publicly. She believes that it allows her members to become true conessiours, and
+    comrades, for they all share a love for wine.
 
+    NOTE: Customer's information is only disclosed if McDowell has permission to do so.
+</p>
+
+<br>
+<br>
+<br>
+<br>
+
+<h2> About the developers of the website </h2>
+<p> The developers of DeathCat Industries are fresh college graduates. There a small team of five, but all have BS in Computer Science with a passion
+    for web development.  They have worked closely with Kristine to give her the most contemporary
+and easy-to-use website possible, so that she can upkeep it in her own time.Below you will find their database diagrams pre-production. </p>
+
+<a href="/images/VineyardDiagram.png"> ER Diagram of the database </a>
+<br>
+<a href="/images/VineyardSchema.png"> Relational Schema of the diagram </a>
 <%- include("footer.ejs"); %>
