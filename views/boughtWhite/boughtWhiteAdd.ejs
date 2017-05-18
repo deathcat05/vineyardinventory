@@ -1,0 +1,20 @@
+<%- include("../header.ejs", {title:"Add New White Wine Order"}); %>
+<h1>Add Wine(s) for this Customer's Order </h1>
+<p> Please select the wine(s) the customer ordered and how many of each.  </p>
+<form action="/boughtWhite/insert" method="get">
+    Wine Bought:  <select id="whiteBottleNumber" name="whiteBottleNumber" multiple="multiple"></select>
+    <br />
+    <br />
+   Quantity: <input id="numberBottlesBought" name="numberBottlesBought" type="text" />
+    <br />
+    <br />
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#whiteBottleNumber').multiselect();
+        });
+    </script>
+
+    <input type="submit" />
+
+</form>
+<%- include("../footer.ejs"); %>

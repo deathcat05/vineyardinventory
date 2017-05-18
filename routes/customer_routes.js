@@ -52,11 +52,7 @@ router.get('/add', function(req, res){
 // View the company for the given id
 router.get('/insert', function(req, res){
     // simple validation
-    if(req.query.customerNumber == null)
-    {
-        res.send('There needs to be a customer number ');
-    }
-    else if(req.query.firstName == null)
+    if(req.query.firstName == null)
     {
         res.send('A first name must be provided');
     }

@@ -10,6 +10,8 @@ var about = require('./routes/about');
 var whiteWine = require('./routes/whiteWine_routes');
 var redWine = require('./routes/redWine_routes');
 var customer = require('./routes/customer_routes');
+var boughtWhite = require('./routes/boughtWhite_routes');
+var shippingDept = require('./routes/shippingDept_routes');
 var app = express();
 
 // view engine setup
@@ -30,6 +32,9 @@ app.use('/about', about);
 app.use('/whiteWine', whiteWine);
 app.use('/redWine', redWine);
 app.use('/customer', customer);
+app.use('/boughtWhite', boughtWhite);
+app.use('/shippingDept', shippingDept);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');

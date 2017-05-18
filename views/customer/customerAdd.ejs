@@ -1,0 +1,22 @@
+<%- include("../header.ejs", {title:"Add New Customer"}); %>
+<h1>Add New Customer</h1>
+<p> Yay! Someone has placed an order from us, and they aren't in our system. Please enter their information so that
+    we can keep them up to date on the latest news, and ,of course, to ensure that we deilver their wine bottles to them
+    in a timely manner. </p>
+<form action="/customer/insert" method="get">
+    First Name: <input id="firstName" name="firstName" type="text" />
+    <br />
+    <br />
+    Last Name: <input id="lastName" name="lastName" type="text" />
+    <br />
+    <br />
+    Address: <input id="address" name="address" type="text"/>
+    <br />
+    <br />
+    Club Member: <input id="isMember" name="isMember" type="text" />
+    <br />
+    <br />
+    <input type="submit" />
+
+</form>
+<%- include("../footer.ejs"); %>

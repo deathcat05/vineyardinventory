@@ -1,7 +1,32 @@
+<style>
+    a:link {
+        color: darkcyan;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: purple;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: lightseagreen;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: darkslategrey;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+</style>
 <%- include("../header.ejs", {title:"Customers in our Inventory"}); %>
 
 <h1>Customers</h1>
-<a href="/company/add">Add New Company</a> <br />
+<a href="/customer/add">Add New Customer</a> <br />
 <div style="color:blue">
     <% if (recentChange) { %>
     Recent Change: <%=recentChange%>

@@ -1,0 +1,43 @@
+<%- include("../header.ejs", {title:"View All Orders"}); %>
+<style>
+    a:link {
+        color: darkcyan;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: purple;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: lightseagreen;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: darkslategrey;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+</style>
+
+<h1>Orders for Customers </h1>
+<p> These are the current orders we have on file, whether they have been shipped or not is a different story. </p>
+
+<a href="shippingDept/insert"> Add a new order </a>
+<table border="1">
+    <tr> <th> Order </th> <th> Actions </th> </tr>
+    <% for(var i=0; result.length > i; i++ ) { %>
+    <tr>
+        <td> <a href="/shippingDept/?orderNumber=<%= result[i].orderNumber %>"><%= result[i].orderNumber %></a></td>
+        <td> <button onclick="event.preventDefault();window.location.href='/shippingDept/edit/?orderNumber=<%= result[i].orderNumber %>'"> Edit </button></td>
+
+
+    </tr>
+    <% } %>
+</table>
+<%- include("../footer.ejs"); %>
