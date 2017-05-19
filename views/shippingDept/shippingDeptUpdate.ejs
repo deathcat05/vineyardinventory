@@ -1,3 +1,4 @@
+<%- include("../header.ejs"); %>
 <style>
     a:link {
         color: darkcyan;
@@ -30,7 +31,7 @@
     Customer: <input id="customerNumber" name="customerNumber" type="text" value="<%= shippingDept.customerNumber%>"/>
     <br />
     <br />
-    DateShipped: <input id="dateShipped" name="dateShipped" type="timestamp" value="<%= shipppingDept.dateshipped%>"/>
+    DateShipped: <input id="dateShipped" name="dateShipped" type="timestamp" value="<%= shippingDept.dateShipped%>"/>
     <br />
     <br />
     <input type="submit"/>

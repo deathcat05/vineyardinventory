@@ -1,0 +1,21 @@
+<%- include("../header.ejs", {title:"Add New Bottle of Red Wine"}); %>
+<h1>Add New Bottle of Red Wine </h1>
+<p> Woo hoo! We just managed to strike a relationship with a vineyard owner. We are pleased with our accomplishment, and want to be able
+    to offer this addition to our customers. Please enter the information as follows: </p>
+<form action="/redWine/insert" method="get">
+    Wine Name: <input id="redName" name="redName" type="text" />
+    <br />
+    <br />
+    Year of Wine: <input id="redYear" name="redYear" type="text" />
+    <br />
+    <br />
+    Number Available: <input id="numberRedAvail" name="numberRedAvail" type="text"/>
+    <br />
+    <br />
+    Description: <input id="description" name="description" type="text" />
+    <br />
+    <br />
+    <input type="submit" />
+
+</form>
+<%- include("../footer.ejs"); %>

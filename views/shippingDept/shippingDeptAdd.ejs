@@ -3,8 +3,7 @@
 <p> Yay! Someone has placed an order from us, and they aren't in our system. Please enter their information so that
     we can keep them up to date on the latest news, and ,of course, to ensure that we deilver their wine bottles to them
     in a timely manner. </p>
-<form action="/shippingDept/insert" method="get">
-    Customer Number:<select id="whiteBottleNumber" name="whiteBottleNumber" multiple="multiple"></select>
+    Customer Number:<select id="customerNumber" name="customerNumber" multiple="multiple"></select>
     <br />
     <br />
     <script type="text/javascript">
@@ -18,5 +17,5 @@
     <br />
     <input type="submit" />
 
-</form>
+
 <%- include("../footer.ejs"); %>

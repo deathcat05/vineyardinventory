@@ -1,16 +1,19 @@
-<%- include("../header.ejs", {title:"Add New Customer"}); %>
-<h1>Add Bottle of White Wine for a Customer</h1>
-<p> Please select which bottle(s) the customer would like and how many.  </p>
-<form action="/whiteWine/insert" method="get"><select id="address_id" name="address_id" multiple="multiple">
-
-    <!-- Initialize the multiselect plugin: -->
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#whiteBottleNumber').multiselect();
-        });
-    </script>
-
-
+<%- include("../header.ejs", {title:"Add New Bottle of White Wine"}); %>
+<h1>Add New Bottle of White Wine </h1>
+<p> Woo hoo! We just managed to strike a relationship with a vineyard owner. We are pleased with our accomplishment, and want to be able
+to offer this addition to our customers. Please enter the information as follows: </p>
+<form action="/whiteWine/insert" method="get">
+    Wine Name: <input id="whiteName" name="whiteName" type="text" />
+    <br />
+    <br />
+    Year of Wine: <input id="whiteYear" name="whiteYear" type="text" />
+    <br />
+    <br />
+    Number Available: <input id="numberWhiteAvail" name="numberWhiteAvail" type="text"/>
+    <br />
+    <br />
+    Description: <input id="description" name="description" type="text" />
+    <br />
     <br />
     <input type="submit" />
 

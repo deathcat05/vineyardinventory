@@ -28,8 +28,8 @@ exports.getById = function(orderNumber, callback)
 
 exports.insert = function(params, callback)
 {
-    var query = 'INSERT INTO ShippingDept (customerNumber, dateShipped) VALUES (?, ?);';
-    var queryData = [params.customerNumber, params.dateShipped, params.orderNumber];
+    var query = 'INSERT INTO ShippingDept (dateShipped) VALUES (?);';
+    var queryData = [params.dateShipped, params.orderNumber, params.customerNumber];
 
     connection.query(query, queryData, function(err, result)
     {

@@ -1,3 +1,4 @@
+<%- include("../header.ejs", {title:"White Wines - " + result[0].orderNumber}); %>
 <style>
     a:link {
         color: darkcyan;
@@ -23,16 +24,12 @@
         text-decoration: underline;
     }
 </style>
-<%- include("../header.ejs", {title:"Customer - " + result[0].firstName}); %>
-<h1>Bought White Wine  - <%= result[0].customerNumber %></h1>
-<a href="boughtWhite/add"> Add a new bottle of White Wine for this customer </a>
+<h1>Order Number <%= result[0].orderNumber%> </h1>
 <ul>
-    <li>Customer Full Name: <%= result[0].firstName + ' ' + result[0].lastName %></li>
-    <li>Address: <%= result[0].address %> </li>
-    <li> Club Member: <%= result[0].isMember %> </li>
-    <li> Customer Number: <%= result[0].customerNumber %></li>
+    <li>Customer Number: <%= result[0].customerNumber %></li>
+    <li> Date Shipped: <%= result[0].dateShipped %></li>
 </ul>
 
-<a href="/customer/all"><< back</a>
+<a href="/shippingDept/all"><< back</a>
 
 <%- include("../footer.ejs"); %>

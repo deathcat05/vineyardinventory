@@ -18,20 +18,8 @@ router.get('/all', function(req, res) {
 });
 
 // View the company for the given id
-router.get('/', function(req, res){
-    if(req.query.orderNumber == null)
-    {
-        res.send('We cannot seem to find that order in our inventory');
-    }
-    else if(req.query.customerNumber == null)
-    {
-        res.send('We cannot find a customer with that number ')
-    }
-    else if(req.query.dateShipped == null)
-    {
-        res.send('We do not appear to have that shipping date anywhere in our system')
-    }
-    else {
+router.get('/', function(req, res)
+{
         shippingDept_dal.getById(req.query.orderNumber, function(err,result)
         {
             if (err) {
@@ -41,7 +29,6 @@ router.get('/', function(req, res){
                 res.render('shippingDept/shippingDeptViewByID', {'result': result});
             }
         });
-    }
 });
 
 // Return the add a new company form
@@ -70,17 +57,13 @@ router.get('/insert', function(req, res)
         else
         {
             //poor practice for redirecting the user to a different page, but we will handle it differently once we start using Ajax
-            res.redirect(302, '/shippingDept/shippingDeptAdd');
+            res.redirect(302, '/shippingDept/all');
         }
     });
 });
 
 router.get('/edit', function(req, res)
 {
-   if(req.query.dateShippped == null)
-    {
-        res.send("We need to konw when it was shipped!")
-    }
     {
         shippingDept_dal.edit(req.query.orderNumber, function(err, result)
         {

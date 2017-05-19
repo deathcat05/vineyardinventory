@@ -41,7 +41,7 @@ exports.getById = function(customerNumber, callback)
 exports.insert = function(params, callback)
 {
     var query = 'INSERT INTO BoughtWhite (numberBottlesBought) VALUES (?);';
-    var queryData = [params.numberBottlesBought, params.customerNumber, params.whiteBottleNumber];
+    var queryData = [params.numberBottlesBought, params.customerNumber];
 
     connection.query(query, queryData, function(err, result)
     {
@@ -51,7 +51,7 @@ exports.insert = function(params, callback)
 
 exports.update = function(params, callback)
 {
-    var query = 'UPDATE BoughtWhite SET numberBottlesBought = ? WHERE whiteBottleNumber = ?, customerNumber = ?;';
+    var query = 'UPDATE BoughtWhite SET numberBottlesBought = ? WHERE customerNumber = ?;';
     var queryData =[params.numberBottlesBought,params.whiteBottleNumber, params.customerNumber];
 
     connection.query(query, queryData, function(err, result)
