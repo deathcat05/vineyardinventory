@@ -3,14 +3,26 @@
 <p> Yay! Someone has placed an order from us, and they aren't in our system. Please enter their information so that
     we can keep them up to date on the latest news, and ,of course, to ensure that we deilver their wine bottles to them
     in a timely manner. </p>
-    Customer Number:<select id="customerNumber" name="customerNumber" multiple="multiple"></select>
-    <br />
-    <br />
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#customerNumber').multiselect();
-        });
-    </script>
+<select id="customerNumber" name="customerNumber" multiple="multiple">
+    <% for(var i=0; customer.length > i; i++ ) {
+        var selected = "";
+
+        if(customer[i].customerNumber != null) {
+            selected = "selected";
+        }
+    %>
+    <option value="<%= customer[i].customerNumber %>" <%= selected %> ><%= customer[i].firstName + ', ' + address[i].lastName %></option>
+    <% } %>
+</select>
+
+<!-- Initialize the multiselect plugin: -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#customerNumber').multiselect();
+    });
+</script>
+
+<br />
 
     Shipping Date (in the form 00-00-00 00:00): <input id="shippingDate" name="shippingDate" type="timestamp" />
     <br />

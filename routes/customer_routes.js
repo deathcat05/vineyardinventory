@@ -30,7 +30,7 @@ router.get('/', function(req, res){
                 res.send(err);
             }
             else {
-                res.render('customer/customerViewByID', {'result': result});
+                res.render('customer/customerViewByID', {'result': result, recentChange: req.query.recentChange});
             }
         });
     }
@@ -39,7 +39,8 @@ router.get('/', function(req, res){
 // Return the add a new company form
 router.get('/add', function(req, res){
     // passing all the query parameters (req.query) to the insert function instead of each individually
-    customer_dal.getAll(function(err,result) {
+    customer_dal.getAll(function(err,result)
+    {
         if (err) {
             res.send(err);
         }
@@ -52,23 +53,7 @@ router.get('/add', function(req, res){
 // View the company for the given id
 router.get('/insert', function(req, res){
     // simple validation
-    if(req.query.firstName == null)
-    {
-        res.send('A first name must be provided');
-    }
-    else if(req.query.lastName == null)
-    {
-        res.send('A last name must be provided');
-    }
-    else if(req.query.address == null)
-    {
-        res.send('We need to know an address in order to ship to them!');
-    }
-    else if(req.query.isMember == null)
-    {
-        res.send('It is important for us to know if they are a club member or not');
-    }
-    else {
+   {
         // passing all the query parameters (req.query) to the insert function instead of each individually
         customer_dal.insert(req.query, function(err,result)
         {
@@ -80,7 +65,8 @@ router.get('/insert', function(req, res){
             else
             {
                 //poor practice for redirecting the user to a different page, but we will handle it differently once we start using Ajax
-                res.redirect(302, '/customer/all');
+                var change = req.query.firstName + " Added";
+                res.redirect(302, '/customer/all?recentChange=' + change);
             }
         });
     }
@@ -125,7 +111,6 @@ router.get('/delete', function(req, res){
             }
             else
             {
-                //poor practice, but we will handle it differently once we start using Ajax
                 res.redirect(302, '/customer/all');
             }
         });

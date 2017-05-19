@@ -24,8 +24,14 @@
     }
 </style>
 <%- include("../header.ejs", {title:"Customer - " + result[0].firstName}); %>
-<h1>Bought White Wine  - <%= result[0].customerNumber %></h1>
-<a href="boughtWhite/add"> Add a new bottle of White Wine for this customer </a>
+<h1>Customer  - <%= result[0].firstName %></h1>
+<div style="color:blue">
+    <% if (recentChange) { %>
+    Recent Change: <%=recentChange%>
+    <% } %>
+</div>
+<br />
+<a href="customer/add"> Add a new bottle of White Wine for this customer </a>
 <ul>
     <li>Customer Full Name: <%= result[0].firstName + ' ' + result[0].lastName %></li>
     <li>Address: <%= result[0].address %> </li>
