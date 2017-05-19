@@ -23,7 +23,7 @@
         text-decoration: underline;
     }
 </style>
-
+<%- include("../header.ejs"); %>
 <h1>Update <%= customer.firstName%></h1>
 <form action="/customer/update" method="get">
     <input type="hidden" id="customerNumber" name="customerNumber" value="<%= customer.customerNumber %>">

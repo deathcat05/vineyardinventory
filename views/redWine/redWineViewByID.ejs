@@ -25,6 +25,13 @@
     }
 </style>
 <h1> <%= result[0].redName%> </h1>
+<br />
+<div style="color:crimson">
+    <% if (recentChange) { %>
+    Recent Change: <%=recentChange%>
+    <% } %>
+</div>
+<br />
 <ul>
     <li>Red Year: <%= result[0].redYear %></li>
     <li> Number of Bottles Available: <%= result[0].numberRedAvail %></li>

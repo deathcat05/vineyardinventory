@@ -11,7 +11,7 @@ router.get('/all', function(req, res) {
             res.send(err);
         }
         else {
-            res.render('whiteWine/whiteWineViewAll', { 'result':result });
+            res.render('whiteWine/whiteWineViewAll', {'result': result, recentChange: req.query.recentChange});
         }
     });
 
@@ -26,11 +26,13 @@ router.get('/', function(req, res){
     else {
         whiteWine_dal.getById(req.query.whiteBottleNumber, function(err,result)
         {
-            if (err) {
+            if (err)
+            {
                 res.send(err);
             }
-            else {
-                res.render('whiteWine/whiteWineViewByID', {'result': result});
+            else
+                {
+                res.render('whiteWine/whiteWineViewByID', {'result': result, recentChange: req.query.recentChange});
             }
         });
     }
@@ -78,7 +80,8 @@ router.get('/insert', function(req, res)
             else
             {
                 //poor practice for redirecting the user to a different page, but we will handle it differently once we start using Ajax
-                res.redirect(302, '/whiteWine/all');
+                var change = req.query.whiteName + " Added";
+                res.redirect(302, '/whiteWine/all?recentChange=' + change);
             }
         });
     }
@@ -104,7 +107,8 @@ router.get('/update', function(req, res)
 {
     whiteWine_dal.update(req.query, function(err, result)
     {
-        res.redirect(302, '/whiteWine/all');
+        var change = req.query.whiteName + " Updated";
+        res.redirect(302, '/whiteWine/all?recentChange=' + change);
     });
 });
 
@@ -123,7 +127,8 @@ router.get('/delete', function(req, res){
             else
             {
                 //poor practice, but we will handle it differently once we start using Ajax
-                res.redirect(302, '/skill/all');
+                var change = req.query.whiteName + " Deleted";
+                res.redirect(302, '/whiteWine/all?recentChange=' + change);
             }
         });
     }

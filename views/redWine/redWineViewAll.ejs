@@ -1,4 +1,4 @@
-<%- include("../header.ejs", {title:"View All White Wines - View All"}); %>
+
 <style>
     a:link {
         color: darkcyan;
@@ -24,11 +24,18 @@
         text-decoration: underline;
     }
 </style>
-
+<%- include("../header.ejs", {title:"View All White Wines - View All"}); %>
 <h1>Our Finest Red Wines </h1>
 <p> Our white wines are imported locally from wines all across Sonoma and Napa counties. Nothing below three years is kept in stock. <br>
     Click a wine below to find out more about
     what it has to offer! </p>
+<br />
+<div style="color:crimson">
+    <% if (recentChange) { %>
+    Recent Change: <%=recentChange%>
+    <% } %>
+</div>
+<br />
 <a href="/redWine/add"> Add a New Bottle of Red Wine </a>
 
 <table border="1">
@@ -36,7 +43,13 @@
     <% for(var i=0; result.length > i; i++ ) { %>
     <tr>
         <td> <a href="/redWine/?redBottleNumber=<%= result[i].redBottleNumber %>"><%= result[i].redName %></a></td>
-        <td> <button onclick="event.preventDefault();window.location.href='/redWine/edit/?redBottleNumber=<%= result[i].redBottleNumber %>'"> Edit </button></td>
+        <td> <button onclick="event.preventDefault();window.location.href='/redWine/edit/?redBottleNumber=<%= result[i].redBottleNumber %>'"> Edit </button>
+            <form action="/redWine/delete/" style="display:inline;">
+            <input type="hidden" name="redBottleNumber" id="redBottleNumber" value="<%= result[i].redBottleNumber %>" />
+            <input type="submit" value="Delete"/>
+        </form>
+
+        </td>
     </tr>
     <% } %>
 </table>

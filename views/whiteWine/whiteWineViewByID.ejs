@@ -25,6 +25,13 @@
     }
 </style>
 <h1> <%= result[0].whiteName%> </h1>
+<br />
+<div style="color:crimson">
+    <% if (recentChange) { %>
+    Recent Change: <%=recentChange%>
+    <% } %>
+</div>
+<br />
 <ul>
     <li>White Year: <%= result[0].whiteYear %></li>
     <li> Number of Bottles Available: <%= result[0].numberWhiteAvail %></li>

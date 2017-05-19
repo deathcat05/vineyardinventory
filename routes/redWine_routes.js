@@ -10,8 +10,9 @@ router.get('/all', function(req, res) {
         if(err) {
             res.send(err);
         }
-        else {
-            res.render('redWine/redWineViewAll', { 'result':result });
+        else
+        {
+            res.render('redWine/redWineViewAll', { 'result':result, recentChange: req.query.recentChange });
         }
     });
 
@@ -30,7 +31,7 @@ router.get('/', function(req, res){
                 res.send(err);
             }
             else {
-                res.render('redWine/redWineViewByID', {'result': result});
+                res.render('redWine/redWineViewByID', { 'result':result, recentChange: req.query.recentChange });
             }
         });
     }
@@ -80,8 +81,8 @@ router.get('/insert', function(req, res){
             }
             else
             {
-                //poor practice for redirecting the user to a different page, but we will handle it differently once we start using Ajax
-                res.redirect(302, '/redWine/all');
+                var change = req.query.redName + " Added";
+                res.redirect(302, '/redWine/all?recentChange=' + change);
             }
         });
     }
@@ -107,7 +108,8 @@ router.get('/update', function(req, res)
 {
     redWine_dal.update(req.query, function(err, result)
     {
-        res.redirect(302, '/redWine/all');
+        var change = req.query.redName + " Updated";
+        res.redirect(302, '/redWine/all?recentChange=' + change);
     });
 });
 
@@ -125,8 +127,8 @@ router.get('/delete', function(req, res){
             }
             else
             {
-                //poor practice, but we will handle it differently once we start using Ajax
-                res.redirect(302, '/redWine/all');
+                var change = req.query.redWine + " Deleted";
+                res.redirect(302, '/redWine/all?recentChange=' + change);
             }
         });
     }

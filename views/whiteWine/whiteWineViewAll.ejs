@@ -30,14 +30,27 @@
     Click a wine below to find out more about
     what it has to offer! </p>
 <a href="/whiteWine/add"> Add a New Type of White Wine </a>
+<br/>
+<div style="color:crimson">
+    <% if (recentChange) { %>
+    Recent Change: <%=recentChange%>
+    <% } %>
+</div>
+
 <br />
+
 <table border="1">
     <tr> <th> White Wine </th> <th> Actions </th> </tr>
     <% for(var i=0; result.length > i; i++ ) { %>
     <tr>
         <td> <a href="/whiteWine/?whiteBottleNumber=<%= result[i].whiteBottleNumber %>"><%= result[i].whiteName %></a></td>
-        <td> <button onclick="event.preventDefault();window.location.href='/whiteWine/edit/?whiteBottleNumber=<%= result[i].whiteBottleNumber %>'"> Edit </button></td>
+        <td> <button onclick="event.preventDefault();window.location.href='/whiteWine/edit/?whiteBottleNumber=<%= result[i].whiteBottleNumber %>'"> Edit </button>
+        <form action="/whiteWine/delete/" style="display:inline;">
+            <input type="hidden" name="whiteBottleNumber" id="whiteBottleNumber" value="<%= result[i].whiteBottleNumber %>" />
+            <input type="submit" value="Delete"/>
+        </form>
 
+        </td>
 
     </tr>
     <% } %>

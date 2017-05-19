@@ -23,7 +23,7 @@
         text-decoration: underline;
     }
 </style>
-
+<%- include("../header.ejs"); %>
 <h1>Update <%= whiteWine.whiteName%></h1>
 <form action="/whiteWine/update" method="get">
     <input type="hidden" id="whiteBottleNumber" name="whiteBottleNumber" value="<%= whiteWine.whiteBottleNumber %>">
