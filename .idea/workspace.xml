@@ -3,18 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="44aaece9-4d2b-490e-ad4a-8f30c0bdcc8c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/shippingDept_dal.js" afterPath="$PROJECT_DIR$/model/shippingDept_dal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/customer_routes.js" afterPath="$PROJECT_DIR$/routes/customer_routes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/redWine_routes.js" afterPath="$PROJECT_DIR$/routes/redWine_routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/shippingDept_routes.js" afterPath="$PROJECT_DIR$/routes/shippingDept_routes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/whiteWine_routes.js" afterPath="$PROJECT_DIR$/routes/whiteWine_routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/customer/customerUpdate.ejs" afterPath="$PROJECT_DIR$/views/customer/customerUpdate.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/customer/customerViewAll.ejs" afterPath="$PROJECT_DIR$/views/customer/customerViewAll.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/customer/customerViewByID.ejs" afterPath="$PROJECT_DIR$/views/customer/customerViewByID.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/redWine/redWineUpdate.ejs" afterPath="$PROJECT_DIR$/views/redWine/redWineUpdate.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/redWine/redWineViewAll.ejs" afterPath="$PROJECT_DIR$/views/redWine/redWineViewAll.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/redWine/redWineViewByID.ejs" afterPath="$PROJECT_DIR$/views/redWine/redWineViewByID.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/whiteWine/whiteWineUpdate.ejs" afterPath="$PROJECT_DIR$/views/whiteWine/whiteWineUpdate.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/whiteWine/whiteWineViewAll.ejs" afterPath="$PROJECT_DIR$/views/whiteWine/whiteWineViewAll.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/whiteWine/whiteWineViewByID.ejs" afterPath="$PROJECT_DIR$/views/whiteWine/whiteWineViewByID.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/shippingDept/shippingDeptViewAll.ejs" afterPath="$PROJECT_DIR$/views/shippingDept/shippingDeptViewAll.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/shippingDept/shippingDeptViewByID.ejs" afterPath="$PROJECT_DIR$/views/shippingDept/shippingDeptViewByID.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,24 +29,11 @@
       <file leaf-file-name="redWineViewAll.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/redWine/redWineViewAll.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+            <state relative-caret-position="352">
+              <caret line="52" column="15" lean-forward="true" selection-start-line="46" selection-start-column="11" selection-end-line="52" selection-end-column="15" />
               <folding>
                 <element signature="e#835#856#0#HTML" expanded="true" />
                 <element signature="e#1459#1482#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="whiteWineViewAll.ejs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/whiteWine/whiteWineViewAll.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="46" column="162" lean-forward="false" selection-start-line="46" selection-start-column="162" selection-end-line="46" selection-end-column="162" />
-              <folding>
-                <element signature="e#896#917#0#HTML" expanded="true" />
-                <element signature="e#1477#1500#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,64 +54,19 @@
       <file leaf-file-name="customer_routes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/customer_routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="70" column="11" lean-forward="true" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
+            <state relative-caret-position="1616">
+              <caret line="114" column="74" lean-forward="true" selection-start-line="113" selection-start-column="16" selection-end-line="114" selection-end-column="74" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="redWine_routes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/redWine_routes.js">
+      <file leaf-file-name="shippingDept_routes.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/shippingDept_routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="133" column="5" lean-forward="true" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
+            <state relative-caret-position="391">
+              <caret line="104" column="40" lean-forward="false" selection-start-line="104" selection-start-column="40" selection-end-line="104" selection-end-column="40" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="whiteWineViewByID.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/whiteWine/whiteWineViewByID.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-              <folding>
-                <element signature="e#630#651#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="whiteWine_routes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/whiteWine_routes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="106" column="1" lean-forward="true" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="redWineUpdate.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/redWine/redWineUpdate.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="customerViewAll.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/customer/customerViewAll.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="50" column="8" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
-              <folding>
-                <element signature="e#649#670#0#HTML" expanded="true" />
-                <element signature="e#1207#1230#0#HTML" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -136,9 +75,67 @@
         <entry file="file://$PROJECT_DIR$/views/customer/customerViewByID.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="33" selection-end-column="6" />
               <folding>
                 <element signature="e#631#652#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shippingDeptAdd.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/shippingDept/shippingDeptAdd.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shippingDept_dal.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/shippingDept_dal.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="25" column="2" lean-forward="false" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="customerViewAll.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/customer/customerViewAll.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="43" column="8" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+              <folding>
+                <element signature="e#951#972#0#HTML" expanded="true" />
+                <element signature="e#1515#1538#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shippingDeptViewAll.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/shippingDept/shippingDeptViewAll.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+              <folding>
+                <element signature="e#763#784#0#HTML" expanded="true" />
+                <element signature="e#1327#1350#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shippingDeptViewByID.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/shippingDept/shippingDeptViewByID.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="33" column="6" lean-forward="false" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+              <folding>
+                <element signature="e#639#660#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,27 +167,27 @@
         <option value="$PROJECT_DIR$/model/boughtWhite_dal.js" />
         <option value="$PROJECT_DIR$/routes/boughtWhite_routes.js" />
         <option value="$PROJECT_DIR$/views/shippingDept/shippingDeptUpdate.ejs" />
-        <option value="$PROJECT_DIR$/routes/shippingDept_routes.js" />
-        <option value="$PROJECT_DIR$/model/shippingDept_dal.js" />
-        <option value="$PROJECT_DIR$/views/shippingDept/shippingDeptViewByID.ejs" />
         <option value="$PROJECT_DIR$/views/whiteWine/whiteWineAdd.ejs" />
-        <option value="$PROJECT_DIR$/views/shippingDept/shippingDeptViewAll.ejs" />
         <option value="$PROJECT_DIR$/views/redWine/redWineAdd.ejs" />
         <option value="$PROJECT_DIR$/views/shippingDept/shippingDeptAdd.ejs" />
         <option value="$PROJECT_DIR$/model/customer_dal.js" />
         <option value="$PROJECT_DIR$/views/customer/customerAdd.ejs" />
-        <option value="$PROJECT_DIR$/routes/whiteWine_routes.js" />
         <option value="$PROJECT_DIR$/views/customer/customerUpdate.ejs" />
         <option value="$PROJECT_DIR$/views/whiteWine/whiteWineUpdate.ejs" />
         <option value="$PROJECT_DIR$/views/redWine/redWineUpdate.ejs" />
-        <option value="$PROJECT_DIR$/routes/customer_routes.js" />
-        <option value="$PROJECT_DIR$/routes/redWine_routes.js" />
         <option value="$PROJECT_DIR$/views/redWine/redWineViewByID.ejs" />
-        <option value="$PROJECT_DIR$/views/customer/customerViewAll.ejs" />
         <option value="$PROJECT_DIR$/views/customer/customerViewByID.ejs" />
         <option value="$PROJECT_DIR$/views/whiteWine/whiteWineViewByID.ejs" />
-        <option value="$PROJECT_DIR$/views/redWine/redWineViewAll.ejs" />
         <option value="$PROJECT_DIR$/views/whiteWine/whiteWineViewAll.ejs" />
+        <option value="$PROJECT_DIR$/routes/customer_routes.js" />
+        <option value="$PROJECT_DIR$/routes/redWine_routes.js" />
+        <option value="$PROJECT_DIR$/routes/whiteWine_routes.js" />
+        <option value="$PROJECT_DIR$/views/redWine/redWineViewAll.ejs" />
+        <option value="$PROJECT_DIR$/views/customer/customerViewAll.ejs" />
+        <option value="$PROJECT_DIR$/model/shippingDept_dal.js" />
+        <option value="$PROJECT_DIR$/views/shippingDept/shippingDeptViewByID.ejs" />
+        <option value="$PROJECT_DIR$/views/shippingDept/shippingDeptViewAll.ejs" />
+        <option value="$PROJECT_DIR$/routes/shippingDept_routes.js" />
       </list>
     </option>
   </component>
@@ -518,12 +515,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1495121868652</updated>
-      <workItem from="1495121869911" duration="34843000" />
+      <workItem from="1495121869911" duration="37468000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34843000" />
+    <option name="totallyTimeSpent" value="37468000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -763,34 +760,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/shippingDept/shippingDeptViewByID.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/shippingDept_dal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
           <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/shippingDept/shippingDeptViewAll.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="30" column="10" lean-forward="false" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -803,34 +776,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/whiteWine_dal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-735">
-          <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/whiteWine/whiteWineAdd.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/shippingDept/shippingDeptAdd.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/shippingDept_routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="95" column="16" lean-forward="true" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -891,30 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/customer_routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="70" column="11" lean-forward="true" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/whiteWine_routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="106" column="1" lean-forward="true" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/redWine_routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="133" column="5" lean-forward="true" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/whiteWine/whiteWineViewByID.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -925,24 +850,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/customer/customerViewByID.ejs">
+    <entry file="file://$PROJECT_DIR$/views/whiteWine/whiteWineViewAll.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+        <state relative-caret-position="474">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
-            <element signature="e#631#652#0#HTML" expanded="true" />
+            <element signature="e#896#917#0#HTML" expanded="true" />
+            <element signature="e#1477#1500#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/customer/customerViewAll.ejs">
+    <entry file="file://$PROJECT_DIR$/model/whiteWine_dal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="50" column="8" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
-          <folding>
-            <element signature="e#649#670#0#HTML" expanded="true" />
-            <element signature="e#1207#1230#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="460">
+          <caret line="73" column="30" lean-forward="true" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/redWine_routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="129" column="46" lean-forward="false" selection-start-line="129" selection-start-column="46" selection-end-line="129" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/whiteWine_routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="120" column="8" lean-forward="false" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -956,10 +895,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/model/shippingDept_dal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" column="2" lean-forward="false" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/customer/customerViewAll.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="43" column="8" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+          <folding>
+            <element signature="e#951#972#0#HTML" expanded="true" />
+            <element signature="e#1515#1538#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/shippingDept/shippingDeptAdd.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/customer_routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1616">
+          <caret line="114" column="74" lean-forward="true" selection-start-line="113" selection-start-column="16" selection-end-line="114" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/customer/customerViewByID.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="33" selection-end-column="6" />
+          <folding>
+            <element signature="e#631#652#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/redWine/redWineViewAll.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+        <state relative-caret-position="352">
+          <caret line="52" column="15" lean-forward="true" selection-start-line="46" selection-start-column="11" selection-end-line="52" selection-end-column="15" />
           <folding>
             <element signature="e#835#856#0#HTML" expanded="true" />
             <element signature="e#1459#1482#0#HTML" expanded="true" />
@@ -967,14 +951,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/whiteWine/whiteWineViewAll.ejs">
+    <entry file="file://$PROJECT_DIR$/views/shippingDept/shippingDeptViewByID.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="46" column="162" lean-forward="false" selection-start-line="46" selection-start-column="162" selection-end-line="46" selection-end-column="162" />
+        <state relative-caret-position="318">
+          <caret line="33" column="6" lean-forward="false" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
           <folding>
-            <element signature="e#896#917#0#HTML" expanded="true" />
-            <element signature="e#1477#1500#0#HTML" expanded="true" />
+            <element signature="e#639#660#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/shippingDept/shippingDeptViewAll.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+          <folding>
+            <element signature="e#763#784#0#HTML" expanded="true" />
+            <element signature="e#1327#1350#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/shippingDept_routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="104" column="40" lean-forward="false" selection-start-line="104" selection-start-column="40" selection-end-line="104" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>

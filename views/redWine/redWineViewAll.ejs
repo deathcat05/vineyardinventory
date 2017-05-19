@@ -46,7 +46,10 @@
         <td> <button onclick="event.preventDefault();window.location.href='/redWine/edit/?redBottleNumber=<%= result[i].redBottleNumber %>'"> Edit </button>
             <form action="/redWine/delete/" style="display:inline;">
             <input type="hidden" name="redBottleNumber" id="redBottleNumber" value="<%= result[i].redBottleNumber %>" />
-            <input type="submit" value="Delete"/>
+                <input type="hidden" name="redName" id="redName" value="<%= result[i].redName%>"/>
+                <input type="hidden" name="redYear" id="redYear" value="<%= result[i].redYear%>"/>
+                <input type="hidden" name="description" id="description" value="<%= result[i].description %>"/>
+                <input type="submit" value="Delete"/>
         </form>
 
         </td>

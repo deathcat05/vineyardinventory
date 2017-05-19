@@ -29,15 +29,31 @@
 <p> These are the current orders we have on file, whether they have been shipped or not is a different story. </p>
 
 <a href="/shippingDept/add"> Add a new order </a>
+<div style="color:crimson">
+    <% if (recentChange) { %>
+    Recent Change: <%=recentChange%>
+    <% } %>
+</div>
+
+<br />
 <table border="1">
-    <tr> <th> Order </th> <th> Actions </th> </tr>
+    <tr> <th> Order # </th> <th> Actions </th> </tr>
     <% for(var i=0; result.length > i; i++ ) { %>
     <tr>
         <td> <a href="/shippingDept/?orderNumber=<%= result[i].orderNumber %>"><%= result[i].orderNumber %></a></td>
-        <td> <button onclick="event.preventDefault();window.location.href='/shippingDept/edit/?orderNumber=<%= result[i].orderNumber %>'"> Edit </button></td>
-
-
+        <td> <button onclick="event.preventDefault();window.location.href='/shippingDept/edit/?orderNumber=<%= result[i].orderNumber %>'"> Edit </button>
+        <form action="/shippingDept/delete/" style="display:inline;">
+            <input type="hidden" name="orderNumber" id="orderNumber" value="<%= result[i].orderNumber %>" />
+            <input type="submit" value="Mark as Sent"/>
+        </form>
+        </td>
     </tr>
     <% } %>
 </table>
+<h2> Orders with more (or exactly) 3 bottles of white wine </h2>
+<p> For this month, we need to triple check that we are getting these orders out in a timely manner. Our white wine purchases are our most
+valuable items.
+Thank you for all you do, team!
+-Kristi</p>
+(<%= getOrders %>)
 <%- include("../footer.ejs"); %>

@@ -26,12 +26,17 @@
 <%- include("../header.ejs", {title:"Customers in our Inventory"}); %>
 
 <h1>Customers</h1>
-<a href="/customer/add"> Add New Customer</a> <br />
+<p> Below are the customers who have ordered wine from our compnay. They may or may not be a wine club member. That information is known only if you click on
+his or her name. We do special promotions, so please be on the lookout for people who aren't members who might benefit from one! (: </p>
+<br />
+<a href="/customer/add"> Add New Customer</a>
+<br />
 <div style="color:crimson">
     <% if (recentChange) { %>
     Recent Change: <%=recentChange%>
     <% } %>
 </div>
+<br/>
 
 <table border="1">
     <tr><th>Name</th><th>Actions</th></tr>

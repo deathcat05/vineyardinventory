@@ -127,7 +127,7 @@ router.get('/delete', function(req, res){
             }
             else
             {
-                var change = req.query.redWine + " Deleted";
+                var change = req.query.redName + " Deleted";
                 res.redirect(302, '/redWine/all?recentChange=' + change);
             }
         });

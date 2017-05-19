@@ -6,12 +6,18 @@ var shippingDept_dal = require('../model/shippingDept_dal');
 
 // View All Addresses
 router.get('/all', function(req, res) {
-    shippingDept_dal.getAll(function(err, result){
-        if(err) {
+    shippingDept_dal.getAll(function(err, result)
+    {
+        if(err)
+        {
             res.send(err);
         }
-        else {
-            res.render('shippingDept/shippingDeptViewAll', { 'result':result });
+        else
+        {
+            res.render('shippingDept/shippingDeptViewAll',
+                {
+                    'result': result, recentChange: req.query.recentChange, getOrders: req.query.getOrders
+                });
         }
     });
 
@@ -26,7 +32,7 @@ router.get('/', function(req, res)
                 res.send(err);
             }
             else {
-                res.render('shippingDept/shippingDeptViewByID', {'result': result});
+                res.render('shippingDept/shippingDeptViewByID', {'result': result, recentChange: req.query.recentChange});
             }
         });
 });
@@ -56,8 +62,8 @@ router.get('/insert', function(req, res)
         }
         else
         {
-            //poor practice for redirecting the user to a different page, but we will handle it differently once we start using Ajax
-            res.redirect(302, '/shippingDept/all');
+            var change = "Order " + req.query.orderNumber + " Added";
+            res.redirect(302, '/shippingDept/all?recentChange=' + change);
         }
     });
 });
@@ -77,8 +83,9 @@ router.get('/update', function(req, res)
 {
     shippingDept_dal.update(req.query, function(err, result)
     {
-        res.redirect(302, '/shippingDept/all');
-    });
+        var change = "Order " + req.query.orderNumber + " Updated";
+        res.redirect(302, '/shippingDept/all?recentChange=' + change);
+});
 });
 
 // Delete a company for the given companyID
@@ -95,8 +102,8 @@ router.get('/delete', function(req, res){
             }
             else
             {
-                //poor practice, but we will handle it differently once we start using Ajax
-                res.redirect(302, '/shippingDept/all');
+                var change = "Order " + req.query.firstName + " Sent (unless you archieved without sending!)";
+                res.redirect(302, '/shippingDept/all?recentChange=' + change);
             }
         });
     }

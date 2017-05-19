@@ -117,7 +117,8 @@ router.get('/delete', function(req, res){
     if(req.query.whiteBottleNumber == null) {
         res.send('We need to know which bottle you want to delete');
     }
-    else {
+    else
+        {
         whiteWine_dal.delete(req.query.whiteBottleNumber, function(err, result)
         {
             if(err)

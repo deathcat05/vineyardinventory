@@ -111,7 +111,7 @@ router.get('/delete', function(req, res){
             }
             else
             {
-                var change = req.query.customerName + " Deleted";
+                var change = req.query.firstName + " Deleted";
                 res.redirect(302, '/customer/all?recentChange=' + change);
             }
         });

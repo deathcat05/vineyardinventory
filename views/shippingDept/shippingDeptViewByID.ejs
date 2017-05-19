@@ -25,6 +25,13 @@
     }
 </style>
 <h1>Order Number <%= result[0].orderNumber%> </h1>
+<div style="color:crimson">
+    <% if (recentChange) { %>
+    Recent Change: <%=recentChange%>
+    <% } %>
+</div>
+
+<br />
 <ul>
     <li>Customer Number: <%= result[0].customerNumber %></li>
     <li> Date Shipped: <%= result[0].dateShipped %></li>

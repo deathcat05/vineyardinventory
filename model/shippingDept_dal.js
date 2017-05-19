@@ -13,7 +13,17 @@ exports.getAll = function(callback)
         callback(err, result);
     });
 };
+exports.getOrders = function(params, callback)
+{
+    var query = 'SELECT * FROM totalWineBottlesCustomer;';
+    var queryData = [params.customerNumber, params.firstName, params.lastName, params.numberBottlesBought, params.whiteBottleNumber];
 
+    connection.query(query, queryData, function(err, result)
+    {
+        callback(err, result);
+    });
+
+};
 exports.getById = function(orderNumber, callback)
 {
     var query = 'SELECT * FROM ShippingDept WHERE orderNumber = ?;';
