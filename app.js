@@ -6,6 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
+//Added for the users authenticated by Passport
+//var users = require('./routes/users');
 var about = require('./routes/about');
 var whiteWine = require('./routes/whiteWine_routes');
 var redWine = require('./routes/redWine_routes');
@@ -13,6 +15,13 @@ var customer = require('./routes/customer_routes');
 var boughtWhite = require('./routes/boughtWhite_routes');
 var shippingDept = require('./routes/shippingDept_routes');
 var app = express();
+
+//These are used for the passportJS
+var passport = require('passport');
+var LocalStrategy = require('passport-local');
+var mongoose = require('mongoose');
+var flash = require('connect-flash');
+var session = require('express-session');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,8 +36,22 @@ app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Added for Passport integrationg
+app.use(session({
+    secret: 'superSecret',
+    resave: true,
+    saveUninitialized: true}));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+
+//require('./config/passport')(passport);
+
+
 app.use('/', index);
 app.use('/about', about);
+//The Users route
+//app.use('/users', users);
 app.use('/whiteWine', whiteWine);
 app.use('/redWine', redWine);
 app.use('/customer', customer);
