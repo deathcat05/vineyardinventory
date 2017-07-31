@@ -45,7 +45,10 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
-//require('./config/passport')(passport);
+//var configDB = require('./config/db_connection');
+//mongoose.connect(configDB.url);
+
+require('./config/passport')(passport);
 
 
 app.use('/', index);

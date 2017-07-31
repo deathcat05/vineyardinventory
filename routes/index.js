@@ -22,8 +22,21 @@ router.get('profile', isLoggedIn, function(req, res){
 
 router.get('/logout', function(req, res){
     req.logout();
-    res.rediredt('/');
+    res.redirect('/');
 });
+
+router.post('/signup', passport.authenticate('local-signup', {
+    successRedirect: '/profile',
+    failureRedirect: '/signup',
+    failureFlash: true
+}));
+
+router.post('/login', passport.authenticate('local-login',{
+    successRedirect: '/profile',
+    failureRedirect: '/login',
+    failureFlash: true
+}));
+
 
 module.exports = router;
 
