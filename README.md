@@ -8,6 +8,8 @@ This was a project created during my Database Management Systems class Spring of
 
 The following things are implemented in my database, but not outputting to the webpage: 
 
-(1) The BoughtRed table is not properly implemented, and the BoughtWhite table is not implemented at all. However, it does not take away from the current functionality of the webpage.
+(1) The application is only able to be run from localhost. Eventually, I'd like to get it hosted on my own server. 
 
-(2) Authentication is not integrated yet. 
+(2) The BoughtRed table is not properly implemented, and the BoughtWhite table is not implemented at all. However, it does not take away from the current functionality of the webpage.
+
+(3) Authentication is not integrated yet. 
