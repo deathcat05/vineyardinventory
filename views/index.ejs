@@ -1,35 +1,45 @@
 <%- include("header.ejs", {title: title}); %>
-<h1><%= title %></h1>
-<p> Already have an account?
-<br>
-   <a href = "/login" class="btn btn-default"><span class="fa fa-sign-in"> </span> Click here to sign in with Facebook!  </a>
-</p>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
-<p> Don't have an account?
-<br>
-    <a href="/signup" class="btn btn-default"><span class="fa fa-sign-in"> </span> Click here to create an account using your Facebook account </a>
-</p>
+    <style>
+        body
+        {
+            color: whitesmoke;
+        }
+        #wine-jumbotron
+        {
+            color: black;
+            background: transparent;
+        }
 
-<a href="about"> Click here to find out more about Valley Vineyards! </a>
-<br />
-<br/>
-<a href="whiteWine/all"> View all the White Wines we have! </a>
-<br />
-<br />
-
-<a href="redWine/all"> View all the Red Wines we have! </a>
-
-<br>
+    </style>
+</head>
+<body>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container" id="wine-jumbotron">
+        <h1 class="display-3">Browse Our Finest Wine Selections</h1>
+        <a href="whiteWine/all"> White Wines </a>
+        <a href="redWine/all">Red Wines</a>
+        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+</div>
 <br>
 <h2> Valley Vineyards Inventory System </h2>
 <p>  We are currently working on exporting this part of our website to the backend, but we are not quite there yet!
-If you are an employee from the warehouse, please chose from one of the options below to help with the inventory shipments;
+    If you are an employee from the warehouse, please chose from one of the options below to help with the inventory shipments;
 </p>
 <br>
 
 <a href="customer/all"> View the customers in our club </a>
+
+</body>
 <br>
 
 <a href="shippingDept/all"> View the orders we have in our system </a>
 
+
+
 <%- include("footer.ejs"); %>
+</html>
