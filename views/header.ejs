@@ -1,110 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+
     <style>
-        <ahref
-        div.container
-        {
-            width: 100%;
-        }
-
-        header, footer
-        {
-            padding: 0em;
-            color: lightskyblue;
-            clear: left;
-            text-align: center;
-            text-shadow: black;
-        }
-
-        nav left
-        {
-            float: left;
-            max-width: 200px;
-            margin: 0;
-            padding: 1em;
-        }
-
-        nav ul
-        {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul a {
-            text-decoration: none;
-        }
-
-        article {
-            margin-left: 100px;
-            border-left: 1px solid gray;
-            padding: 1em;
-            overflow: hidden;
-        }
         body
         {
             background-image: url("../public/images/background.png");
             background-repeat: no-repeat;
             background-size: cover;
+            padding-top: 70px;
         }
-        h1, h2
-        {
-            color: ghostwhite;
-        }
-
-        p
-        {
-         color: mistyrose;
-        }
-         a:link {
-             color: darkcyan;
-             background-color: transparent;
-             text-decoration: none;
-         }
-
-        a:visited {
-            color: cadetblue;
-            background-color: transparent;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: lightseagreen;
-            background-color: transparent;
-            text-decoration: underline;
-        }
-
-        a:active {
-            color: darkslategrey;
-            background-color: transparent;
-            text-decoration: underline;
-        }
-        tr:nth-of-type(1)
-        {
-             color: mistyrose;
-         }
-
-        li
-        {
-            color: aquamarine;
-        }
-        button, input[type="submit"], input[type="text"], form
-        {
-            background: transparent;
-            color: whitesmoke;
-        }
-
-
     </style>
 </head>
-<body style="margin-left:20px;">
 <body>
-<nav>
 
-</nav>
 <header>
     <h1>Welcome to Valley Vineyards! </h1>
 </header>
 
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-demo" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a href="/" class="navbar-brand"> <span class="glyphicon glyphicon-glass" aria-hidden="true"></span> Valley Vineyards </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li> <a href="/about"> About </a> </li>
+                <li> <a href="#"> Contact </a> </li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li> <a href="/signup"> Sign Up </a> </li>
+                <li> <a href="/login"> Login </a> </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 </body>
 </html>
