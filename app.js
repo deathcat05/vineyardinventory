@@ -1,4 +1,5 @@
 var express = require('express');
+
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -15,7 +16,7 @@ var customer = require('./routes/customer_routes');
 var boughtWhite = require('./routes/boughtWhite_routes');
 var shippingDept = require('./routes/shippingDept_routes');
 var app = express();
-
+app.use(express.static('public'))
 //These are used for the passportJS
 var passport = require('passport');
 var LocalStrategy = require('passport-local');
@@ -27,14 +28,18 @@ var session = require('express-session');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+//
+
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, "public/images", 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 //Added for Passport integrationg
 app.use(session({
@@ -45,7 +50,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
-//var configDB = require('./config/db_connection');
+var configDB = require('./config/db_connection');
 //mongoose.connect(configDB.url);
 
 require('./config/passport')(passport);
