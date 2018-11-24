@@ -2,8 +2,7 @@
   "name": "vineyardinventory",
   "version": "0.0.0",
   "private": true,
-  "scripts":
-  {
+  "scripts": {
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -22,6 +21,6 @@
     "passport": "^0.3.2",
     "passport-facebook": "^2.1.1",
     "passport-local": "^1.0.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "^2.3.2"
   }
 }

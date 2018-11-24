@@ -4,7 +4,5 @@ exports.config =
     user: 'cmeyer',
     password: 'Buffal0$',
     host: 'localhost',
-    port: 8080,
-
-
+    port: 3306,
 };

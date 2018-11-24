@@ -2,42 +2,27 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
     <style>
-        body
-        {
-            color: whitesmoke;
+        .cover {
+            padding: 0 1.5rem;
         }
-
-        .inner-cover
-        {
-           vertical-align: middle;
-            center: 100%;
+        .cover .btn-lg {
+            padding: .75rem 1.25rem;
+            font-weight: 700;
         }
-
-        h1
-        {
-            vertical-align: middle;
-            horiz-align: center;
-        }
-
-
-
-
     </style>
 </head>
 <body>
-<div class="inner-cover">
-    <h1>Valley Vineyards</h1>
+<main role="main" class="inner cover">
+    <h1 class="cover-heading">Valley Vineyards.</h1>
     <p class="lead">Valley Vineyards was founded in 1993 by Kristine McDowell. She moved to Napa valley with the dream of being a great wine connesiour. She began to build
-        a repoire with many of the local vineyard owners. By the year 2000, McDowell became the largest wine distributor in northern California.n fullscreen background photo to make it your own.</p>
+        a repoire with many of the local vineyard owners. By the year 2000, McDowell became the largest wine distributor in northern California</p>
     <p class="lead">
         <a href="/about" class="btn btn-lg btn-secondary">Learn more</a>
     </p>
-</div>
+</main>
 
-
-
+</body>
 
 <%- include("footer.ejs"); %>
 </html>

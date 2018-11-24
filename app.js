@@ -16,7 +16,10 @@ var customer = require('./routes/customer_routes');
 var boughtWhite = require('./routes/boughtWhite_routes');
 var shippingDept = require('./routes/shippingDept_routes');
 var app = express();
-app.use(express.static('public'))
+app.use(express.static('public/images'));
+app.use(express.static('public/css'));
+
+
 //These are used for the passportJS
 var passport = require('passport');
 var LocalStrategy = require('passport-local');
@@ -31,13 +34,7 @@ app.set('view engine', 'ejs');
 //
 
 // uncomment after placing your favicon in /public
-app.use(favicon(path.join(__dirname, "public/images", 'favicon.ico')));
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(require('less-middleware')(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(favicon(__dirname + '/public/images/HomeIcon.ico'));
 
 
 
